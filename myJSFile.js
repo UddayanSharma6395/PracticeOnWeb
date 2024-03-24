@@ -130,4 +130,45 @@ console.log(cart);
 var cart;// "HOISTING" is a feature in javaScript which automatically moves the declaration to the top of the code 
 
 
+// -------------------------Arrays-------------------------
 
+
+var myArray = [1,2,3,4,5,6,7];
+console.log(myArray);
+myArray.push(8);//add at end
+console.log(myArray);
+myArray.pop();//remove from end
+console.log(myArray);
+myArray.unshift(0);//add at front
+console.log(myArray);
+myArray.shift(myArray);//remove from front
+console.log(myArray);
+
+
+// -------------------------Recursive function------------------------
+var num=1;
+function printNum()
+{
+    console.log(num);
+    num++;
+    
+    if(num<=10)
+    {
+        printNum();
+    }
+    else
+    {
+        console.log("Hello");
+        return;
+    }
+}
+
+printNum();
+
+// -------------------------Array example2--------------------------
+
+var arr=[10,20,30];
+console.log(arr);
+
+const [x,y,z,a]= arr;// "destructuring" to assign array elements into variables altogether
+console.log(x,y,z,a);
