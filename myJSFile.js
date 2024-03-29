@@ -172,3 +172,86 @@ console.log(arr);
 
 const [x,y,z,a]= arr;// "destructuring" to assign array elements into variables altogether
 console.log(x,y,z,a);
+
+
+
+//----------------------Maps in JavaScript------------------------
+
+var arr=[10,20,30];
+
+const newArr=arr.map(
+    (e) => e+1
+);
+console.log(arr);
+console.log(newArr);
+
+//----------------------Filters in JavaScript------------------------
+
+var arr=[10,20,30,50,60,40];
+
+const newArrfilter=arr.filter(
+    (e) => e<50
+);
+console.log(arr);
+console.log(newArrfilter);
+
+
+
+//ES6 
+
+//default parameters --------------------------------
+function hello(name="world"/*this is how we use default parameters*/)
+{
+    console.log("Hello "+name);
+}
+hello("uddayan");
+
+// TEMPLATE LITERALS
+
+console.log("Apple\nMango\nBanana\nPineapple");
+console.log("-------------method to print in es6 is using  ` ` marks");
+console.log(`Apple
+Mango
+Banana
+Pineapple
+`);
+
+//SCOPING
+
+function outer()
+{
+    var name1="anil";
+    let name2="kapoor";
+
+    function inner()
+    {
+        var name1 = "shahid";
+        console.log(name1);
+    }
+    inner();
+    console.log(name1);
+}
+outer();
+
+
+
+//----------------------------Asyncronus JavaScript ----------------------------------------------------
+
+//ASYNCRONoUS JS 
+//PROMISES
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((result) => result.json())
+.then((data) => console.log(data));
+
+
+console.log("----------------------------------------")
+
+//ASYNC AWAIT
+
+const getData = async() => {
+    const result = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await result.json();
+    console.log(data);
+}
+getData();
